@@ -90,8 +90,7 @@ def extend_time(t, extend=400):
     return np.r_[np.arange(t[0]-extend//dt*dt,t[0],dt),t]
 
 if __name__ == '__main__':
-    #ice_vol = np.load('data/bin_isolated_ice_vol_km3')
-    ice_vol = np.load('data/benthic.npy')
+    ice_vol = np.load('data/bin_isolated_ice_vol_km3')
     ice_vol_fun = interp1d(*ice_vol[:,:2].T)
 
     tmin = -800
